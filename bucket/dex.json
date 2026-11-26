@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "description": "A black-and-white gothic desktop music player built on Mornye.",
+    "homepage": "https://github.com/Hanishchow/Dex",
+    "license": "LGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Hanishchow/Dex/releases/download/dex-v1.0.0/Dex-dex-v1.0.0-windows-x64.zip",
+            "hash": "52aa7ace82dcb72c67f2a888a13ffb78e79b17af2b4737c7f7cc705446822aca"
+        }
+    },
+    "bin": "dex.exe",
+    "shortcuts": [
+        [
+            "dex.exe",
+            "Dex"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Hanishchow/Dex",
+        "regex": "/tag/dex-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Hanishchow/Dex/releases/download/dex-v$version/Dex-dex-v$version-windows-x64.zip"
+            }
+        }
+    }
+}
